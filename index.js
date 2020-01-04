@@ -78,9 +78,9 @@ function arpDevices(range, callback) {
                 if (osType === 'Linux') {
                   host.mac = stdout.split('\n')[1].replace(/ +/g, ' ').split(' ')[2];
                 } else if (osType === 'Darwin') {
-                  host.mac = stdout.split(' ')[3]
+                  host.mac = stdout.split(' ')[3];
                 } else {
-                  host.mac = stdout.split('\n')[3].replace(/ +/g, ' ').replace('-', ':').split(' ')[2]
+                  host.mac = stdout.split('\n')[3].replace(/ +/g, ' ').replace('-', ':').split(' ')[2];
                 }
 
                 var known = macLookup(host.mac);
